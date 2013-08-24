@@ -8,7 +8,9 @@
  * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
  */
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
 <![endif]-->
@@ -24,6 +26,11 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/reset.css" type="text/css">
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/grid.css" type="text/css">
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/screen.css" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800,400' rel='stylesheet' type='text/css'>  <script type="text/javascript" charset="utf-8" src="respond.min.js"></script>
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
@@ -31,21 +38,29 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="page" class="hfeed site">
-		<header id="masthead" class="site-header" role="banner">
-			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</a>
-
-			<div id="navbar" class="navbar">
-				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
-					<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
-					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-					<?php get_search_form(); ?>
-				</nav><!-- #site-navigation -->
-			</div><!-- #navbar -->
-		</header><!-- #masthead -->
-
-		<div id="main" class="site-main">
+	<div class="container_5">  <!-- Header --> 
+		<div class="head">
+			<div class="grid_3 logo">
+			<a href="#"><img src="<?php bloginfo('template_url'); ?>/images/logo.jpg"></a>
+			</div>
+			<div class="grid_2 alpha omega">
+				<div class="recherche">
+	        <input type="text" value="Recherche" name="s" id="s" onfocus="this.value==this.defaultValue?this.value='':null"/>
+	        <!-- <input type="submit" id="searchsubmit" value=">" /> -->
+				</div>
+				<div class="clear"></div>
+				<div class="menu">
+					<ul>
+						<li><a href="#">Articles</a></li>
+						<li><a href="#">Brèves</a></li>
+						<li><a href="#">Contribuer</a></li>
+						<li><a href="#">À propos</a></li>
+						<li><a href="#">S'abonner</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	
