@@ -51,7 +51,7 @@ img.social {
 
 div.nospace {
   margin-top: -6px;
-  margin-bottom: -6px; }
+  margin-bottom: -3px; }
 
 /** Trucs général **/
 div.recherche {
@@ -213,11 +213,14 @@ div.breve {
 /** Accueil **/
 div.appel ul li {
   float: left;
-  border-right: 1px solid #f2f2f2; }
-  div.appel ul li:last-child {
-    border-right: 0; }
+  /*			border-right: 1px solid #f2f2f2;
+  			&:last-child {
+  				border-right: 0;
+  			}
+  */ }
   div.appel ul li a img {
     width: 326px;
+    height: 167px;
     margin-right: 0px; }
 
 /** Page brèves **/

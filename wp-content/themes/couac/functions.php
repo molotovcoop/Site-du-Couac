@@ -24,6 +24,8 @@
  * @since Twenty Thirteen 1.0
  */
 
+add_theme_support( 'post-thumbnails' ); 
+
 /**
  * Sets up the content width value based on the theme's design.
  * @see twentythirteen_content_width() for template-specific adjustments.

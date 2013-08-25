@@ -9,9 +9,8 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package Molotov
+ * @subpackage Le Couac
  */
 
 get_header(); ?>
@@ -20,10 +19,19 @@ get_header(); ?>
 	<div class="container_5">
 		<div class="grid_5 appel nospace">
 			<ul>
-				<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/soiree.png" alt="Soiree" /></a></li>
-				<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/soiree.png" alt="Soiree" /></a></li>
-				<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/soiree.png" alt="Soiree" /></a></li>
+			  <?php query_posts(array(
+				'post_type' => 'appel', 
+				'showposts' => 3)) ;
+				while (have_posts()): the_post();
+					$meta = get_post_meta( get_the_ID() );
+					$appel = $meta['image'][0]['guid']; 
+					?>
+					<li><a href="<?php the_permalink(); ?>"><img src="<?php print $appel;?>"</a></li>
+									
+				<?php endwhile; ?>
+			
 			</ul>
+
 		</div>
 	</div>
 	<div class="clear"></div>

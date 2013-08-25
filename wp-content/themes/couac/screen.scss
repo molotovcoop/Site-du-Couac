@@ -65,7 +65,7 @@ img.social {
 }
 div.nospace {
 	margin-top: -6px;
-	margin-bottom: -6px;
+	margin-bottom: -3px;
 }
 
 
@@ -278,13 +278,14 @@ div.appel {
 	ul {
 		li {
 			float: left;
-			border-right: 1px solid #f2f2f2;
+/*			border-right: 1px solid #f2f2f2;
 			&:last-child {
 				border-right: 0;
 			}
-			a {
+*/			a {
 				img {
 					width: 326px;
+					height: 167px;
 					margin-right: 0px;
 				}
 			}
