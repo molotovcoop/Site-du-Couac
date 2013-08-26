@@ -41,7 +41,7 @@
 	<div class="container_5">  <!-- Header --> 
 		<div class="head">
 			<div class="grid_3 logo">
-			<a href="#"><img src="<?php bloginfo('template_url'); ?>/images/logo.jpg"></a>
+			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.jpg"></a>
 			</div>
 			<div class="grid_2 alpha omega">
 				<div class="recherche">

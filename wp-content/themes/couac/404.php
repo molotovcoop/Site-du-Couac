@@ -9,23 +9,22 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<div class="container_5">
+		<div class="grid_3 prefix_1 suffix_1">
 
 			<header class="page-header">
 				<h1 class="page-title"><?php _e( 'Not found', 'twentythirteen' ); ?></h1>
 			</header>
 
-			<div class="page-wrapper">
 				<div class="page-content">
-					<h2><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentythirteen' ); ?></h2>
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentythirteen' ); ?></p>
+					<h2>Ça n'existe pas</h2>
+					<p>Mais ce n'est pas une raison pour ne pas écrire un article sur le sujet!</p>
 
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
-			</div><!-- .page-wrapper -->
 
 		</div><!-- #content -->
+		<div class="clear"></div>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

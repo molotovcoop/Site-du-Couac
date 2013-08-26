@@ -20,9 +20,8 @@
 		<li><a href="#">S'abonner</a></li>
 		<li><a href="#">Contact</a></li>
 	</ul>
-	<h2><a href="#">Le Couac</a></h2>
+	<h2><a href="<?php bloginfo('url'); ?>">Le Couac</a></h2>
 </div>
- 
 
 	<?php wp_footer(); ?>
 </body>
