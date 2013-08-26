@@ -8,9 +8,6 @@
 		<header>
 			<div class="boite">
 				<div class="titre">
-					<!-- <?php print_r($meta) ?> -->
-					<!-- <?php the_permalink();
-					the_permalink( the_ID() );  ?> -->
 					<h2><?php print $sous_titre ?></h2>
 					<h1><?php if (is_single()==false): ?><a href="<?php the_permalink(); ?>"><?php endif ?><?php the_title(); ?><?php if (is_single()==false): ?></a><?php endif ?></h1>
 			</div>
@@ -37,16 +34,20 @@
 <div class="large breve"> <!-- Brève --> 
 	<div class="container_5">
 		
-		<?php $args = array( 'posts_per_page' => 1, 'orderby' => 'rand', 'post_type'=>'breve' );
+		<?php $args = array( 
+			'posts_per_page' => 1, 
+			'orderby' => 'rand', 
+			'post_type'=>'breve' );
 		$rand_posts = get_posts( $args );
 		foreach ( $rand_posts as $post ) : 
-		  setup_postdata( $post ); ?>
+		  setup_postdata( $post ); 
+			$auteur = get_post_meta(get_the_ID(), 'auteur', true); ?>
 			<div class="grid_1 titre">
-				<h1><?php the_title('<h3>', '</h3>', TRUE); ?></h1>
+				<h1><?php the_title(); ?></h1>
 			</div>
 			<div class="grid_3 texte">
-				<p><?php the_content("Continue reading " . the_title('', '', false)); ?><br />
-					<span><?php the_author() ?></span></p>
+				<p><?php the_content("Continue reading " . the_title('', '', false)); ?>
+					<span><?php print $auteur ?></span></p>
 			</div>
 			<div class="grid_1 autre">
 				<a href="#">D'autres brèves »</a>
