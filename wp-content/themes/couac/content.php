@@ -1,10 +1,10 @@
 <?php /** * The default template for displaying content. Used for both single and index/archive/search. * * @package Molotov * @subpackage Le Couac */ ?>
 
 <div class="container_5"> <!-- Article --> 
-
+		
 	<article id="post-<?php the_ID(); ?>" <?php if (has_post_thumbnail() == false): ?>class="nophoto"<?php endif ?>>
-	<?php $meta = get_post_meta( get_the_ID() );
-	$sous_titre = $meta['sous_titre'][0]; ?>
+		<?php $meta = get_post_meta( get_the_ID() );
+		$sous_titre = $meta['sous_titre'][0]; ?>
 		<header>
 			<div class="boite">
 				<div class="titre">

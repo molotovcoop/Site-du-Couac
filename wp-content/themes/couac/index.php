@@ -14,23 +14,9 @@
  */
 
 get_header(); ?>
-
-<div class="large nospace"> <!-- Appels/Plogues --> 
-	<div class="container_5">
-		<div class="grid_5 appel nospace">
-			<ul>
-				<?php $args = array( 
-				'post_type' => 'appel' ) ;
-				$appels = get_posts( $args );
-				foreach ( $appels as $appel ) : ?>
-					<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?></a></li>
-				<?php endforeach; ?>
-			</ul>
-		</div>
-	</div>
-	<div class="clear"></div>
-</div> 
-<div class="clear"></div>
+<?php if (is_home()==true): ?>
+	<?php get_sidebar('top') ?>
+<?php endif ?>
 
 <?php if ( have_posts() ) : ?>
 	<?php /* The loop */ ?>
